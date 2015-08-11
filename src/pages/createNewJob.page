@@ -1,0 +1,22 @@
+<apex:page standardController="Job__c" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Welcome to my page</h1>
+  <apex:form >
+  <apex:outputText title="{!$Label.With_line_break}" value="JobName">
+  </apex:outputText>
+     
+  <apex:inputField value="{!Job__c.Name}" label="Enter name"/>
+ 
+  <apex:outputText value="Testing"  title="{!Job__c.Title_description__c}" escape="false"> </apex:outputText>
+  <br/>
+  <apex:commandButton value="submit"/>
+  </apex:form>
+  <apex:tabPanel switchType="client" selectedTab="tabdetails" 
+                  id="AccountTabPanel" tabClass="activeTab" 
+                  inactiveTabClass="inactiveTab">   
+  <apex:tab label="jobs">
+  <apex:detail relatedList="false" title="true"/>
+   
+  </apex:tab>
+  </apex:tabPanel>
+</apex:page>
